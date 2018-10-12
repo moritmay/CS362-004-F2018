@@ -657,7 +657,8 @@ int getCost(int cardNumber)
 	    }
 	    drawCard(currentPlayer, state);
 	    cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
-	    if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+	   //introduced bug, changed cardDrawn == copper to cardDrawn ==silver
+      if (cardDrawn == silver || cardDrawn == silver || cardDrawn == gold)
 	      drawntreasure++;
 	    else{
 	      temphand[z]=cardDrawn;
@@ -673,7 +674,8 @@ int getCost(int cardNumber)
 
 void smithyCard(int currentPlayer, struct gameState *state, int handPos){
   //+3 Cards
-      for (int i = 0; i < 3; i++)
+  //bug introduced, changed to add 4 cards instead of 3
+      for (int i = 0; i < 4; i++)
 	{
 	  drawCard(currentPlayer, state);
 	}
@@ -684,7 +686,8 @@ void smithyCard(int currentPlayer, struct gameState *state, int handPos){
 void villageCard(int currentPlayer, struct gameState *state, int handPos){ 
   drawCard(currentPlayer, state);
   //+2 Actions
-  state->numActions = state->numActions + 2;
+  //bug introduced to add 3 actions instead of 2
+  state->numActions = state->numActions + 3;
   //discard played card from hand
   discardCard(handPos, currentPlayer, state, 0);
 }
@@ -699,7 +702,9 @@ void great_hallCard(int currentPlayer, struct gameState *state, int handPos){
 }
 
 void sea_hagCard(int currentPlayer, struct gameState *state){
-  for (int i = 0; i < state->numPlayers; i++){
+  //introduced bug to have the for loop go to 1 less than the number of players
+  //changed i < state->numPlayers to i < (state->numPlayers - 1)
+  for (int i = 0; i < (state->numPlayers -1); i++){
 	  if (i != currentPlayer){
 	    state->discard[i][state->discardCount[i]] = state->deck[i][state->deckCount[i]--];			    state->deckCount[i]--;
 	    state->discardCount[i]++;
