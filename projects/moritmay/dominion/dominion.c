@@ -645,7 +645,7 @@ int getCost(int cardNumber)
 
 
 	//Adventurer card function breakout
-  void adventurerCard(int currentPlayer, struct gameState *state){
+  int adventurerCard(int currentPlayer, struct gameState *state){
     int drawntreasure = 0;
     int cardDrawn;
     int temphand[MAX_HAND];
@@ -670,9 +670,10 @@ int getCost(int cardNumber)
 	    state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
 	    z=z-1;
     }
+    return 0;
 }
 
-void smithyCard(int currentPlayer, struct gameState *state, int handPos){
+int smithyCard(int currentPlayer, struct gameState *state, int handPos){
   //+3 Cards
   //bug introduced, changed to add 4 cards instead of 3
       for (int i = 0; i < 4; i++)
@@ -681,6 +682,7 @@ void smithyCard(int currentPlayer, struct gameState *state, int handPos){
 	}
       //discard card from hand
       discardCard(handPos, currentPlayer, state, 0);
+  return 0;
 }
  
 void villageCard(int currentPlayer, struct gameState *state, int handPos){ 
@@ -692,13 +694,14 @@ void villageCard(int currentPlayer, struct gameState *state, int handPos){
   discardCard(handPos, currentPlayer, state, 0);
 }
 
-void great_hallCard(int currentPlayer, struct gameState *state, int handPos){
+int great_hallCard(int currentPlayer, struct gameState *state, int handPos){
   //+1 Card
   drawCard(currentPlayer, state);
 	//+1 Actions
   state->numActions++;
 	//discard card from hand
   discardCard(handPos, currentPlayer, state, 0);
+  return 0;
 }
 
 void sea_hagCard(int currentPlayer, struct gameState *state){
@@ -737,7 +740,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     {
     case adventurer:
       adventurerCard(currentPlayer, state);
-      return 0;
+    //  return 0;
       /*while(drawntreasure<2){
 	if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
 	  shuffle(currentPlayer, state);
@@ -901,7 +904,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     case smithy:
       //+3 Cards
       smithyCard(currentPlayer, state, handPos);
-      return 0;
+      //return 0;
     /*  for (i = 0; i < 3; i++)
 	{
 	  drawCard(currentPlayer, state);

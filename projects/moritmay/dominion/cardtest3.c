@@ -1,5 +1,5 @@
-//unit test 4
-//check shuffle function 
+//card test 3
+//check garden implementation
 
 #include "dominion.h"
 #include "dominion_helpers.h"
@@ -10,10 +10,10 @@
 #include <time.h>
 #include <stdlib.h>
 
+
 int main(){
   struct gameState state;
   struct gameState previousState;
-  
   int k[10] = {adventurer, gardens, embargo, village, great_hall, mine, cutpurse,
 	       sea_hag, tribute, smithy};
   int p;
@@ -23,16 +23,20 @@ int main(){
   p = (rand()%3) + 2;
 
   initializeGame(p, k, rand(), &state);
-  
-  previousState = state;
-  shuffle(p, &state);  
 
-  if (&previousState != &state) {
-    printf("shuffle test passed\n");
-  }  
+  int turn = whoseTurn(&state);
+  int pTurn = whoseTurn(&previousState);
+
+  previousState = state;
+  cardEffect(gardens, 0, 0, 0, &state, NULL, NULL);
+  if (&previousState == &state){
+      printf("garden test failed\n");
+  }
   else {
-    printf("shuffle test failed\n");
+     printf("garden test passed\n");
   }
 
-return 0;
+
+  return 0;
 }
+
