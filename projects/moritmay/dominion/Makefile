@@ -74,7 +74,7 @@ unittestresults: unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 car
 	echo "unittest4.c" >> unittestresults.out
 	gcc -o unittest4 dominion.c rngs.c unittest3.c $(CFLAGS)
 	./unittest4 >> unittestresults.out
-	gcov dominion.c >> unittestrestults.out
+	gcov dominion.c >> unittestresults.out
 	
 	echo "cardtest1.c:" >> unittestresults.out
 	gcc -o cardtest1 dominion.c rngs.c cardtest1.c $(CFLAGS)
