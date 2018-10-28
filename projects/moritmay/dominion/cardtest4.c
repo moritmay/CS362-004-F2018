@@ -28,7 +28,7 @@ int main(){
   
   pActions = actions;
   cardEffect(great_hall, 0, 0, 0, &state, NULL, NULL);
-  if (pActions != actions){
+  if (pActions == actions){
       printf("great hall test failed\n");
   }
   else {
