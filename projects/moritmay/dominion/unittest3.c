@@ -13,8 +13,7 @@
 
 int main(){
     struct gameState state;
-    int k[10] = {adventurer, gardens, embargo, village, great_hall, mine, cutpurse,
-	       sea_hag, tribute, smithy};
+    int k[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     int p;
     srand(time(0));
 
