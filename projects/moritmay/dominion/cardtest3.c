@@ -31,10 +31,10 @@ int main(){
   cardEffect(gardens, 0, 0, 0, &state, NULL, NULL);
   //if (&previousState == &state){
   if (turn == pTurn){
-      printf("garden test failed\n");
+      printf("garden test passed\n");
   }
   else {
-     printf("garden test passed\n");
+     printf("garden test failed\n");
   }
 
 
