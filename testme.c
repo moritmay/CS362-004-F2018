@@ -6,27 +6,26 @@
 char inputChar()
 {
   // TODO: rewrite this function
-  srand(time(0));
 
-  int rAscii = (rand() % (126-32+1)+32;
-  char randomC = char rAscii;
-  return rAscii;
+  int rAscii = ((rand() % (126-32+1))+32);
+  char randomC = (char) rAscii;
+  return randomC;
 }
 
 char *inputString()
 {
     // TODO: rewrite this function
-  srand(time(0));
 
-  char string[8];
-  for (int i = 0; i < 7; i++){
-    int rAsciiString = (rand() % (126-32+1)) + 32;
-    char randomString = char rAsciiString;
+  char string[6];
+  for (int i = 0; i < 5; i++){
+    int rAsciiString = ((rand() % (122-97+1)) + 97);
+    char randomString = (char) rAsciiString;
     string[i] = randomString;
   }
-  string[7] = '\0';
+  string[5] = '\0';
+  char *genRandomString = string;
 
-  return string;
+  return genRandomString;
 }
 
 void testme()
