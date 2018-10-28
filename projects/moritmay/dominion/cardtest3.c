@@ -29,7 +29,7 @@ int main(){
 
   previousState = state;
   cardEffect(gardens, 0, 0, 0, &state, NULL, NULL);
-  if (&previousState == &state){
+  if (&previousState != &state){
       printf("garden test failed\n");
   }
   else {
