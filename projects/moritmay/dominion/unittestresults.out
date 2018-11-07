@@ -1,0 +1,97 @@
+Result for unittest and cardtests:
+unittest1.c:
+province card exhausted to end game, and isGameOver test passed
+File 'dominion.c'
+Lines executed:16.34% of 563
+Creating 'dominion.c.gcov'
+
+unittest2.c:
+whoseTurn test passed
+File 'dominion.c'
+Lines executed:16.34% of 563
+Creating 'dominion.c.gcov'
+
+unittest3.c:
+Victory cards supplyCount test passed
+Victory cards supplyCount test passed
+Victory cards supplyCount test passed
+Treasure cards supplyCount test passed
+Treasure cards supplyCount test passed
+Treasure cards supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+File 'dominion.c'
+Lines executed:15.63% of 563
+Creating 'dominion.c.gcov'
+
+unittest4.c
+Victory cards supplyCount test passed
+Victory cards supplyCount test passed
+Victory cards supplyCount test passed
+Treasure cards supplyCount test passed
+Treasure cards supplyCount test passed
+Treasure cards supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+File 'dominion.c'
+Lines executed:15.63% of 563
+Creating 'dominion.c.gcov'
+
+cardtest1.c:
+adventurer test failed
+File 'dominion.c'
+Lines executed:15.45% of 563
+Creating 'dominion.c.gcov'
+
+cardtest2.c:
+Smithy test failed
+File 'dominion.c'
+Lines executed:21.85% of 563
+Creating 'dominion.c.gcov'
+
+cardtest3.c:
+garden test passed
+File 'dominion.c'
+Lines executed:17.94% of 563
+Creating 'dominion.c.gcov'
+
+cardtest4.c:
+great hall test failed
+File 'dominion.c'
+Lines executed:20.96% of 563
+Creating 'dominion.c.gcov'
+
