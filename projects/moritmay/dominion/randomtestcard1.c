@@ -17,7 +17,7 @@ int main(){
         int p;
         srand(time(0));
         int  go = isGameOver(&state);
-     for (int testRun = 0; testRun < 100; testRun++){       
+     for (int testRun = 0; testRun < 200; testRun++){       
         //randomize number of players from 1-6
         p = (rand()%5) + 1;
 
