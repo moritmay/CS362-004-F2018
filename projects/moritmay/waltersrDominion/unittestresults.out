@@ -1,0 +1,73 @@
+Result for unittest and cardtests:
+unittest1.c:
+province card exhausted to end game, and isGameOver test passed
+File 'unittest1.c'
+Lines executed:50.00% of 20
+Creating 'unittest1.c.gcov'
+
+unittest2.c:
+whoseTurn test passed
+File 'unittest2.c'
+Lines executed:83.33% of 12
+Creating 'unittest2.c.gcov'
+
+unittest3.c:
+Victory cards supplyCount test passed
+Victory cards supplyCount test passed
+Victory cards supplyCount test passed
+Treasure cards supplyCount test passed
+Treasure cards supplyCount test passed
+Treasure cards supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+supplyCount test passed
+File 'unittest3.c'
+Lines executed:80.95% of 21
+Creating 'unittest3.c.gcov'
+
+unittest4.c
+shuffle test passed
+File 'unittest4.c'
+Lines executed:100.00% of 9
+Creating 'unittest4.c.gcov'
+
+cardtest1.c:
+adventurer test failed
+File 'cardtest1.c'
+Lines executed:74.07% of 27
+Creating 'cardtest1.c.gcov'
+
+cardtest2.c:
+Smithy test failed
+File 'cardtest2.c'
+Lines executed:92.31% of 13
+Creating 'cardtest2.c.gcov'
+
+cardtest3.c:
+garden test passed
+File 'cardtest3.c'
+Lines executed:92.31% of 13
+Creating 'cardtest3.c.gcov'
+
+cardtest4.c:
+great hall test failed
+File 'cardtest4.c'
+Lines executed:92.31% of 13
+Creating 'cardtest4.c.gcov'
+

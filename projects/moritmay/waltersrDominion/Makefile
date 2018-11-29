@@ -1,4 +1,4 @@
-CFLAGS= -Wall -fpic -coverage -lm -std=c99 -Wno-unused-variable 
+CFLAGS= -Wall -fpic -coverage -lm -std=c99 -w 
 
 rngs.o: rngs.h rngs.c
 	gcc -c rngs.c -g  $(CFLAGS)
@@ -102,7 +102,7 @@ unittestresults: unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 car
 	gcov unittest3.c >> unittestresults.out
 	
 	echo "unittest4.c" >> unittestresults.out
-	gcc -o unittest4 dominion.c rngs.c unittest3.c $(CFLAGS)
+	gcc -o unittest4 dominion.c rngs.c unittest4.c $(CFLAGS)
 	./unittest4 >> unittestresults.out
 	gcov unittest4.c >> unittestresults.out
 	
